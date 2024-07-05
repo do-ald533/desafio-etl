@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "desafio-etl"
+version = "0.1.0"
+description = ""
+authors = ["do-ald533 <douglas.aldred533@gmail.com>"]
+readme = "README.md"
+
+[tool.poe.tasks]
+format = "ruff format"
+lint = "ruff lint"
+start = "python src"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlmodel = "^0.0.19"
+pyspark = "^3.5.1"
+pandas = "^2.2.2"
+pyarrow = "^16.1.0"
+grpcio = "^1.64.1"
+numpy = "^2.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.5.0"
+mypy = "^1.10.1"
+pytest = "^8.2.2"
+poethepoet = "^0.27.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
